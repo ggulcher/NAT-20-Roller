@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/roll_nav_host"
+    app:startDestination="@id/diceFragment">
+
+    <fragment
+        android:id="@+id/diceFragment"
+        android:name="com.slapstick.nat20redux2.ui.dice.DiceFragment"
+        android:label="DiceFragment"
+        tools:layout="@layout/fragment_dice" >
+        <action
+            android:id="@+id/action_diceFragment_to_favoritesFragment2"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_diceFragment_to_journalFragment3"
+            app:destination="@id/journalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.slapstick.nat20redux2.ui.favorites.FavoritesFragment"
+        android:label="FavoritesFragment" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_diceFragment"
+            app:destination="@id/diceFragment" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_addFavoriteFragment"
+            app:destination="@id/addFavoriteFragment" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_updateFavoriteFragment"
+            app:destination="@id/updateFavoriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFavoriteFragment"
+        android:name="com.slapstick.nat20redux2.ui.favorites.AddFavoriteFragment"
+        android:label="AddFavoriteFragment"
+        tools:layout="@layout/fragment_favorite_add" >
+        <action
+            android:id="@+id/action_addFavoriteFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateFavoriteFragment"
+        android:name="com.slapstick.nat20redux2.ui.favorites.UpdateFavoriteFragment"
+        android:label="UpdateFavoriteFragment" >
+        <argument
+            android:name="currentFavorite"
+            app:argType="com.slapstick.nat20redux2.db.favorites.Favorite" />
+        <action
+            android:id="@+id/action_updateFavoriteFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalFragment"
+        android:name="com.slapstick.nat20redux2.ui.journal.JournalFragment"
+        android:label="JournalFragment"
+        tools:layout="@layout/fragment_journal" >
+        <action
+            android:id="@+id/action_journalFragment_to_diceFragment"
+            app:destination="@id/diceFragment" />
+        <action
+            android:id="@+id/action_journalFragment_to_addJournalFragment"
+            app:destination="@id/addJournalFragment" />
+        <action
+            android:id="@+id/action_journalFragment_to_updateJournalFragment"
+            app:destination="@id/updateJournalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addJournalFragment"
+        android:name="com.slapstick.nat20redux2.ui.journal.AddJournalFragment"
+        android:label="AddJournalFragment"
+        tools:layout="@layout/fragment_journal_add" >
+        <action
+            android:id="@+id/action_addJournalFragment_to_journalFragment"
+            app:destination="@id/journalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateJournalFragment"
+        android:name="com.slapstick.nat20redux2.ui.journal.UpdateJournalFragment"
+        android:label="UpdateJournalFragment"
+        tools:layout="@layout/fragment_journal_update" >
+        <argument
+            android:name="currentJournal"
+            app:argType="com.slapstick.nat20redux2.db.journal.Journal" />
+        <action
+            android:id="@+id/action_updateJournalFragment_to_journalFragment"
+            app:destination="@id/journalFragment" />
+    </fragment>
+</navigation>

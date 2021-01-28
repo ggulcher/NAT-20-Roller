@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layoutDirection="rtl">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/diceFragment"
+            android:icon="@drawable/roll_logo_thick"
+            android:title="Roll"
+            app:showAsAction="always"/>
+
+        <item android:id="@+id/favoritesFragment"
+            android:icon="@drawable/ic_favorite"
+            android:title="Favorites"
+            app:showAsAction="always"/>
+
+        <item android:id="@+id/journalFragment"
+            android:icon="@drawable/ic_book"
+            android:title="Journal"
+            app:showAsAction="always"/>
+
+<!--        <item android:id="@+id/rateApp"-->
+<!--            android:icon="@drawable/ic_thumbs_up"-->
+<!--            android:title="Rate this app"-->
+<!--            app:showAsAction="always"/>-->
+
+    </group>
+
+</menu>
