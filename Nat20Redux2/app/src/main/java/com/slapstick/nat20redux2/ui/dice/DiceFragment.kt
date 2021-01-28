@@ -31,7 +31,7 @@ class DiceFragment : Fragment(R.layout.fragment_dice) {
 
         selectBonus()
         selectDice()
-        Log.d("DickTucker", "Running")
+        Log.d("DiceFragment", "Running")
     }
 
     private fun rollResult(numSides: Int) {
