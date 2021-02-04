@@ -1,7 +1,6 @@
 package com.slapstick.nat20redux2
 
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
@@ -24,8 +23,6 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         nv_navView.setupWithNavController(rollNavHostFragment.findNavController())
-
-        Log.d("MainSetUp", "Main working")
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

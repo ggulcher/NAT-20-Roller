@@ -3,7 +3,6 @@ package com.slapstick.nat20redux2.ui.dice
 import android.app.AlertDialog
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.util.Log
 import android.view.Gravity
 import android.view.View
 import android.widget.TextView
@@ -31,7 +30,6 @@ class DiceFragment : Fragment(R.layout.fragment_dice) {
 
         selectBonus()
         selectDice()
-        Log.d("DiceFragment", "Running")
     }
 
     private fun rollResult(numSides: Int) {
@@ -52,7 +50,6 @@ class DiceFragment : Fragment(R.layout.fragment_dice) {
 
         displayResult(result)
 
-        Log.i("Result", result.toString())
         playSoundFile(R.raw.diceroll)
         mediaPlayer?.setOnCompletionListener { stopSoundFile() }
 
@@ -63,7 +60,6 @@ class DiceFragment : Fragment(R.layout.fragment_dice) {
         iv_dicePlus.setOnClickListener {
             numDice++
             tv_numberDice.text = "${numDice}d"
-            Log.d("Clicked", "Click works")
         }
         iv_diceMinus.setOnClickListener {
             if(numDice > 1) {
@@ -79,7 +75,6 @@ class DiceFragment : Fragment(R.layout.fragment_dice) {
         iv_modPlus.setOnClickListener {
             amountBonus++
             tv_numberMod.text = "${amountBonus}"
-            Log.d("Clicked", "Click works")
         }
         iv_modMinus.setOnClickListener {
             amountBonus--
